@@ -272,7 +272,7 @@ AS
 GO
 
 ------ I.15 ------
--- Trigger 1: Update DoanhSo when INSERT values to HoaDon
+-- Trigger 15.1: Update DoanhSo when INSERT values to HoaDon
 CREATE TRIGGER TRG_DoanhSo_HoaDon_Insert
 ON HoaDon
 FOR INSERT
@@ -290,7 +290,7 @@ AS
 	END
 GO
 
--- Trigger 2: Update DoanhSo when DELETE values from HoaDon
+-- Trigger 15.2: Update DoanhSo when DELETE values from HoaDon
 CREATE TRIGGER TRG_DoanhSo_HoaDon_Delete
 ON HoaDon
 FOR DELETE
@@ -308,7 +308,7 @@ AS
 	END
 GO
 
--- Trigger 3: Update DoanhSo when Update values HoaDon
+-- Trigger 15.3: Update DoanhSo when Update values HoaDon
 CREATE TRIGGER TRG_DoanhSo_HoaDon_Update
 ON HoaDon
 FOR UPDATE
@@ -325,7 +325,7 @@ AS
 	END
 GO
 
--- Trigger 4: Update values KhachHang but changing DoanhSo
+-- Trigger 15.4: Update values KhachHang but changing DoanhSo
 CREATE TRIGGER TRG_DoanhSo_KhachHang_Update
 ON KhachHang
 FOR UPDATE
