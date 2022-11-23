@@ -176,3 +176,49 @@ INSERT INTO HocVien VALUES ('K1310', 'Tran Thi Hong', 'Tham', '22/04/1986', 'Nu'
 INSERT INTO HocVien VALUES ('K1311', 'Tran Minh', 'Thuc', '04/04/1986', 'Nam', 'Tp HCM', 'K13')
 INSERT INTO HocVien VALUES ('K1312', 'Nguyen Thi Kim', 'Yen', '07/09/1986', 'Nu', 'Tp HCM', 'K13')
 GO
+
+------ II.1 ------
+UPDATE GiaoVien
+SET HeSo = HeSo + 0.2
+WHERE MaGV IN (SELECT TrgKhoa
+			   FROM Khoa
+			  )
+GO
+
+------ II.2 ------
+UPDATE HocVien
+SET DiemTB = (SELECT AVG(Diem)
+			  FROM KetQuaThi KQ1
+			  WHERE HocVien.MaHV = KQ1.MaHV AND
+					LanThi = (SELECT MAX(LanThi)
+							  FROM KetQuaThi KQ2
+							  WHERE KQ1.MaMH = KQ2.MaMH AND KQ1.MaHV = KQ2.MaHV
+							  GROUP BY MaMH
+							  )
+			 GROUP BY MaHV
+			 )
+GO
+
+------ II.3 ------
+UPDATE HocVien
+SET GhiChu = 'Cam thi'
+WHERE MaHV IN (
+	SELECT MaHV
+	FROM KetQuaThi
+	WHERE LanThi >= 3 AND Diem < 5
+)
+
+------ II.4 ------
+SELECT * FROM HocVien
+SELECT * FROM KetQuaThi
+UPDATE HocVien
+SET XepLoai =
+(
+	CASE 
+		WHEN DiemTB >= 9 THEN 'XS'
+		WHEN DiemTB >= 8 AND DiemTB < 9 THEN 'G'
+		WHEN DiemTB >= 6.5 AND DiemTB < 8 THEN 'K'
+		WHEN DiemTB >= 5 AND DiemTB < 6.5 THEN 'TB'
+		WHEN DiemTB < 5 THEN 'Y'
+	END
+)

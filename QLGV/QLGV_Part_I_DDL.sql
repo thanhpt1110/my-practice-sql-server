@@ -1,4 +1,4 @@
-CREATE DATABASE QLGV;
+﻿CREATE DATABASE QLGV;
 GO
 
 USE QLGV;
@@ -127,3 +127,10 @@ ALTER TABLE HocVien ADD GhiChu VARCHAR(20),
 						DiemTB FLOAT,
 						XepLoai VARCHAR(9)
 GO
+
+------ I.2 ------
+-- Trigger chưa biết làm :D
+
+------ I.3 ------
+ALTER TABLE GiaoVien ADD CONSTRAINT CHK_GioiTinh_GV CHECK(GioiTinh IN ('Nam', 'Nu')
+ALTER TABLE GiaoVien ADD CONSTRAINT CHK_GioiTinh_HV CHECK(GioiTinh IN ('Nam', 'Nu')
