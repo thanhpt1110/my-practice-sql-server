@@ -1,6 +1,6 @@
 ------ II ------
 -- INPUT data
-INSERT INTO Khoa VALUES ('KHMT', 'Khoa hoc may yinh', '07/06/2005', 'GV01')
+INSERT INTO Khoa VALUES ('KHMT', 'Khoa hoc may tinh', '07/06/2005', 'GV01')
 INSERT INTO Khoa VALUES ('HTTT', 'He thong thong tin', '07/06/2005', 'GV02')
 INSERT INTO Khoa VALUES ('CNPM', 'Cong nghe phan mem', '07/06/2005', 'GV04')
 INSERT INTO Khoa VALUES ('MTT', 'Mang va truyen thong', '20/10/2005', 'GV03')
@@ -12,19 +12,19 @@ INSERT INTO Lop VALUES ('K12', 'Lop 2 khoa 1', 'K1205', '12', 'GV09')
 INSERT INTO Lop VALUES ('K13', 'Lop 3 khoa 1', 'K1305', '12', 'GV14')
 GO
 
-INSERT INTO MonHoc VALUES ('THDC', 'Tin Hoc Dai Cuong', '4', '1', 'KHMT')
-INSERT INTO MonHoc VALUES ('CTRR', 'Cau Truc Roi Rac', '5', '0', 'KHMT')
-INSERT INTO MonHoc VALUES ('CSDL', 'Co So Du Lieu', '3', '1', 'HTTT')
-INSERT INTO MonHoc VALUES ('CTDLGT', 'Cau Truc Du Lieu Va Giai Thuat', '3', '1', 'KHMT')
-INSERT INTO MonHoc VALUES ('PTTKTT', 'Phan Tich Thiet Ke Thuat Toan', '3', '0', 'KHMT')
-INSERT INTO MonHoc VALUES ('DHMT', 'Do Hoa May Tinh', '3', '1', 'KHMT')
-INSERT INTO MonHoc VALUES ('KTMT', 'Kien Truc May Tinh', '3', '0', 'KTMT')
-INSERT INTO MonHoc VALUES ('TKCSDL', 'Thiet Ke Co So Du Lieu', '3', '1', 'HTTT')
-INSERT INTO MonHoc VALUES ('PTTKHTTT', 'Phan Tich Thiet Ke He Thong Thong Tin', '4', '1', 'HTTT')
-INSERT INTO MonHoc VALUES ('HDH', 'He Dieu Hanh', '4', '0', 'KHMT')
-INSERT INTO MonHoc VALUES ('NMCNPM', 'Nhap Mon Cong Nghe Phan Mem', '3', '0', 'CNPM')
-iNSERT INTO MonHoc VALUES ('LTCFW', 'Lap Trinh C For Win', '3', '1', 'CNPM')
-INSERT INTO MonHoc VALUES ('LTHDT', 'Lap Trinh Huong Doi Tuong', '3', '1', 'CNPM')
+INSERT INTO MonHoc VALUES ('THDC', 'Tin hoc dai cuong', '4', '1', 'KHMT')
+INSERT INTO MonHoc VALUES ('CTRR', 'Cau truc roi rac', '5', '0', 'KHMT')
+INSERT INTO MonHoc VALUES ('CSDL', 'Co so du lieu', '3', '1', 'HTTT')
+INSERT INTO MonHoc VALUES ('CTDLGT', 'Cau truc du lieu va giai thuat', '3', '1', 'KHMT')
+INSERT INTO MonHoc VALUES ('PTTKTT', 'Phan tich thiet ke thuat toan', '3', '0', 'KHMT')
+INSERT INTO MonHoc VALUES ('DHMT', 'Do hoa may tinh', '3', '1', 'KHMT')
+INSERT INTO MonHoc VALUES ('KTMT', 'Kien truc may tinh', '3', '0', 'KTMT')
+INSERT INTO MonHoc VALUES ('TKCSDL', 'Thiet ke co so du lieu', '3', '1', 'HTTT')
+INSERT INTO MonHoc VALUES ('PTTKHTTT', 'Phan tich thiet ke he thong thong tin', '4', '1', 'HTTT')
+INSERT INTO MonHoc VALUES ('HDH', 'He dieu hanh', '4', '0', 'KHMT')
+INSERT INTO MonHoc VALUES ('NMCNPM', 'Nhap mon cong nghe phan mem', '3', '0', 'CNPM')
+iNSERT INTO MonHoc VALUES ('LTCFW', 'Lap trinh C for win', '3', '1', 'CNPM')
+INSERT INTO MonHoc VALUES ('LTHDT', 'Lap trinh huong doi tuong', '3', '1', 'CNPM')
 GO
 
 INSERT INTO GiangDay VALUES ('K11', 'THDC', 'GV07', '1', '2006', '02/01/2006', '12/05/2006')
@@ -176,6 +176,7 @@ INSERT INTO HocVien VALUES ('K1310', 'Tran Thi Hong', 'Tham', '22/04/1986', 'Nu'
 INSERT INTO HocVien VALUES ('K1311', 'Tran Minh', 'Thuc', '04/04/1986', 'Nam', 'Tp HCM', 'K13')
 INSERT INTO HocVien VALUES ('K1312', 'Nguyen Thi Kim', 'Yen', '07/09/1986', 'Nu', 'Tp HCM', 'K13')
 GO
+<<<<<<< HEAD
 
 ------ II.1 ------
 UPDATE GiaoVien
@@ -222,3 +223,5 @@ SET XepLoai =
 		WHEN DiemTB < 5 THEN 'Y'
 	END
 )
+=======
+>>>>>>> 9206ba1b5ab1ff68b53830777dad595219b6a1b8
